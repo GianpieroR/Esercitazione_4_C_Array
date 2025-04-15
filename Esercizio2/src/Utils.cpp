@@ -77,7 +77,7 @@ double ProdottoScalare(const size_t& n, const double* const& w, const double* co
     }
    return Prod;
 }
- // Calcolo il valore finale del portafoglio, applicando la formula: V = (1 + rendimento) * capitale iniziale 
+ // Calcolo il valore finale del portafoglio, applicando la formula
  
 double ValoreTot(const double &r, const double &S)
 {
@@ -101,10 +101,10 @@ bool ScritturaRisultati(const string& outputFilePath, const size_t& n, const dou
     file << "S = " << fixed << setprecision(2) << S << ", n = " << n << endl;
 	
 	// Ripristino il formato predefinito prima di scrivere rate
-	file.unsetf(ios::fixed);		// Disattivo la notazione decimale forzata
+	file.unsetf(ios::fixed);		// Disattivo la notazione decimale standard
 	file << setprecision(4);		// Impostop la precisione totale significativa
 	
-	// I vettori w e r vengono convertiti in stringhe tramite la funzione ArrayToString
+	// I vettori w e r vengono convertiti in stringhe 
     file << "w = " << ArrayToString(n,w) << endl;		
 	file << "r = " << ArrayToString(n,r) << endl;
     file << "Rate of return of the portfolio: " << rate << endl;
